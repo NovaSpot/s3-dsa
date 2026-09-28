@@ -1,0 +1,17 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Files</title>
+</head>
+<body>
+  <h1>Files</h1>
+  <ul>
+    {% for file in site.static_files %}
+    <li><a href="{{ file.path | relative_url }}">{{ file.path | remove_first: '/' }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
